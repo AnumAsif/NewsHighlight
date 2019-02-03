@@ -1,8 +1,8 @@
 import urllib.request,json
 from .models import News
-import time
+# import time
 
-now=time.strftime("%c")
+# now=time.strftime("%c")
 #Getting api key
 api_key=None
 base_url=None
