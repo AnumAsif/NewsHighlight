@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{% block styles %}
+  {{super()}}
+  <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
+{% block content %}
+
+  <div class="container">
+    <h2>Highlights</h2>
+    <ul>
+      {{macro.displayNewsList(general)}}
+    </ul>
+    <h2>Weather</h2>
+    <ul>
+      {{macro.displayNewsList(weather)}}
+    </ul>
+    <h2>Sports</h2>
+    <ul>
+      {{macro.displayNewsList(sports)}}
+    </ul>
+  </div>
+  {%endblock%}
