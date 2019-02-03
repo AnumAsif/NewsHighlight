@@ -14,7 +14,7 @@ def index():
     todays_weather = get_news('weather')
     todays_sports = get_news('sports')
 
-    title = 'Home - Welcoome to the best NEWS UPDATES online site'
+    title = 'Home - Welcome to the best NEWS UPDATES online site'
     # search_news = request.args.get('news_query')
     # if search_movie:
     #     return redirect(url_for('main.search',movie_name = search_news))

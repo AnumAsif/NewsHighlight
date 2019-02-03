@@ -47,7 +47,8 @@ def process_articles(news_list):
         imageUrl= news_article.get('urlToImage')
         description=news_article.get('description')
         article=news_article.get('content')
-        timeOfCreation=news_article.get('publishedAt')
+        time=news_article.get('publishedAt')
+        timeOfCreation=time[11:16]
         news_article = News(source_name,source_url,author_name,imageUrl,description,article,timeOfCreation)
         news_articles.append(news_article)
 
