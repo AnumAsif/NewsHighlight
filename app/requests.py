@@ -1,6 +1,6 @@
 import urllib.request,json
 from .models import News
-from datetime import date
+import datetime
 
 now=str(date.today())
 # .strftime("%c")
@@ -29,7 +29,7 @@ def get_news(category):
     return news_articles
 
 def process_articles(news_list):
-    '''
+    '''ki
     Function that processes the news result and transform them to a list of Objects
 
     Args:
@@ -47,7 +47,8 @@ def process_articles(news_list):
         imageUrl= news_article.get('urlToImage')
         description=news_article.get('description')
         article=news_article.get('content')
-        timeOfCreation=news_article.get('publishedAt')
+        time=news_article.get('publishedAt')
+        timeOfCreation=datetime.datetime.strptime(time,'%H:%M:%S')
         news_article = News(source_name,source_url,author_name,imageUrl,description,article,timeOfCreation)
         news_articles.append(news_article)
 
