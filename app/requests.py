@@ -1,8 +1,8 @@
 import urllib.request,json
 from .models import News
-# import time
+import time
 
-# now=time.strftime("%c")
+now=time.strftime("%c")
 #Getting api key
 api_key=None
 base_url=None
@@ -16,7 +16,7 @@ def get_news(category):
     '''
     Function that gets the json response to our url request
     '''
-    get_news_url = base_url.format(category,api_key)
+    get_news_url = base_url.format(category,now,api_key)
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response= json.loads(get_news_data)
