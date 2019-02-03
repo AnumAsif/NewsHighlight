@@ -1,5 +1,6 @@
 import urllib.request,json
 from .models import News
+from datetime import date
 import datetime
 
 now=str(date.today())
