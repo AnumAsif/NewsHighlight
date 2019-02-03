@@ -1,10 +1,14 @@
 body{
-  background-color: #A3BAC3
+  background-color: #A3BAC3;
+}
+.jumbotron{
+  text-align: center;
 }
 .navbar{
-  background-color: #006989
+  background-color: #006989;
 }
 .col-md-4{
-  background-color: #EAEBED
-
+  background-color: #EAEBED;
+  margin-left: 20px;
+  height: 60px;
 }
