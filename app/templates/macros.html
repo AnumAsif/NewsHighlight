@@ -1,11 +1,11 @@
 {% macro displayNewsList(news_list) %}
 
   {% for news in news_list %}
-    <a href="{{news.url}}"></a>
+    <a href="{{news.source_url}}"></a>
     <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 ">
-      <img src="{{news.urlToImage}}" alt="">
+      <img src="{{news.imageurl}}" alt="">
       <p>{{news.description}}</p>
-      <h3>{{news.publishedAt}}</h3>
+      <h3>{{news.timeOfCreation}}</h3>
     </div>
   {% endfor %}
 {% endmacro %}
