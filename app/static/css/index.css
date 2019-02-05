@@ -1,5 +1,9 @@
+
+/* @import url('https://fonts.googleapis.com/css?family=Kaushan+Script'); */
+
 body{
-  background-color: #A3BAC3;
+  background-color: #A3BAC3 ;
+  font-family: 'Kaushan Script', cursive;
 }
 .jumbotron{
   text-align: center;
@@ -7,8 +11,30 @@ body{
 .navbar{
   background-color: #006989;
 }
-.col-md-4{
-  background-color: #EAEBED;
+
+p{
+  font-size: 25px;
+  font-family: 'Gentium Basic', serif;
+}
+a{
+  font-size: 30px;
   margin-left: 20px;
-  height: 60px;
+  text-decoration: none;
+}
+.col-md-12, .col-md-3{
+  background-color: #EAEBED;
+  margin:10px 10px 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* margin-bottom:10px; */
+}
+.col-md-3{
+  height: 800px;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+a:hover {
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
 }

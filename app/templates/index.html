@@ -1,29 +1,49 @@
 {% extends 'base.html' %}
-{% import 'macros.html' as macro %}
-{% block styles %}
-  {{super()}}
-  <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
-{% endblock %}
+<!-- {% import 'macros.html' as macro %} -->
+
 {% block content %}
 
-  <div class="jumbotron">
-    <h1>Highlights</h1>
-    <h3>{{title}}</h3>
+<div class="jumbotron">
+  <h1>HIGHLIGHTS</h1>
+  <h3>{{title}}</h3>
+  <a href="#">SOURCES</a>
+  <a href="{{url_for('main.highlights')}}">HIGHLIGHTS</a>
+</div>
+<div class="container">
+  <div class="row">
+    {% for source in sources%}
+    <div class="col-md-12">
+      <h2><a href="{{source.source_url}}">{{source.source_name}}</a></h2>
+      <p><strong>Language:</strong> {{source.source_language}}</p>
+      <p><strong>Category:</strong> {{source.source_category}}</p>
+      <h3><strong>AboutUs:</strong></h3>
+      <p>{{source.source_description}}</p>
+    </div>
+    {% endfor%}
   </div>
 
-<div class="container">
+</div>
+
+
+{% endblock %}
+
+<!-- <div class="container">
+    {{macro.displaySources}}
+</div> -->
+
+<!-- <div class="container">
+    <h1>Highlights</h1>
     <ul>
       {{macro.displayNewsList(general)}}
     </ul>
-    <br>
+    <br><br>
     <h2>Weather</h2>
     <ul>
       {{macro.displayNewsList(weather)}}
     </ul>
-    <br>
+    <br><br>
     <h2>Sports</h2>
     <ul>
       {{macro.displayNewsList(sports)}}
     </ul>
-  </div>
-  {%endblock%}
+  </div> -->
