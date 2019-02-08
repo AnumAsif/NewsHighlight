@@ -1,5 +1,5 @@
 import unittest
-from app.models import Review
+from app.models import NewsSource
 
 class TestReview(unittest.TestCase):
 
@@ -7,4 +7,4 @@ class TestReview(unittest.TestCase):
         self.new_source = NewsSource('abc-news','ABC News', "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.","https://abcnews.go.com","general",'en')
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_source,NewsSource))    
+        self.assertTrue(isinstance(self.new_source,NewsSource))
